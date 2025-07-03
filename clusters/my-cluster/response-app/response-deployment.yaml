@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: response-app
-  namespace: depolyment-flux-manifest
+  namespace: deployment-flux-manifest
   labels:
     app: response-app
 spec:

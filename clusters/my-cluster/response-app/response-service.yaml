@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: response-app
-  namespace: depolyment-flux-manifest
+  namespace: deployment-flux-manifest
 spec:
   type: NodePort
   selector:

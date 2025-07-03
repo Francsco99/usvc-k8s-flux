@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: hello-app
-  namespace: depolyment-flux-manifest
+  namespace: deployment-flux-manifest
   labels:
     app: hello-app
 spec:
