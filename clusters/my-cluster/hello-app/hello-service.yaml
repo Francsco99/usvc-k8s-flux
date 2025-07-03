@@ -11,4 +11,4 @@ spec:
     - name: http
       port:       80      # porta interna del Service
       targetPort: 8080   # mappa al containerPort 8080
-      nodePort:   30081  # porta su cui esporre dal nodo
+      nodePort:   30083  # porta su cui esporre dal nodo
