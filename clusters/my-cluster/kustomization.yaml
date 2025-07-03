@@ -5,3 +5,4 @@ resources:
   - service-account.yaml
   - hello-app/
   - response-app/
+  - test-pod/
