@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-app
+  namespace: depolyment-flux-manifest
+  labels:
+    app: hello-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: hello-app
+  template:
+    metadata:
+      labels:
+        app: hello-app
+    spec:
+      containers:
+        - name: hello-app
+          imagePullPolicy: Always
+          image: ghcr.io/francsco99/hello-service/hello-service:0.0.1-snapshot
+          env:
+            - name: RESPONSE_SERVICE_URL
+              value: "http://response-service"
+          ports:
+            - name: http
+              containerPort: 8080
+          # Resource requests and limits to avoid noisy neighbor issues
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "200m"
+              memory: "256Mi"
