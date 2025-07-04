@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: response-values.configmap
+  name: response-values-configmap
   namespace: deployment-flux-helm
 data:
   values.yaml: |
@@ -23,7 +23,7 @@ data:
       type: NodePort
       port: 80
       targetPort: 8080
-      nodePort: 30082
+      nodePort: 30092
 
     resources:
       requests:
