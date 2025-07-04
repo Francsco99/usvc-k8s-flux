@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: response-values
+  name: response-values.configmap
   namespace: deployment-flux-helm
 data:
   values.yaml: |

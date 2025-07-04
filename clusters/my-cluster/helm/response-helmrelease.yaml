@@ -15,5 +15,5 @@ spec:
       version: ">=0.1.0"
   valuesFrom:
     - kind: ConfigMap
-      name: response-values
+      name: response-values-configmap
   targetNamespace: deployment-flux-helm
