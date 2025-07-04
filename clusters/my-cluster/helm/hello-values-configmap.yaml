@@ -18,6 +18,20 @@ data:
       targetPort: 8080
       nodePort: 30091
 
+    livenessProbe:
+      httpGet:
+        path: /
+        port: 8080
+      initialDelaySeconds: 5
+      periodSeconds: 10
+
+    readinessProbe:
+      httpGet:
+        path: /
+        port: 8080
+      initialDelaySeconds: 5
+      periodSeconds: 10
+
     env:
       - name: RESPONSE_SERVICE_URL
         value: "http://response-service.deployment-flux-helm"
@@ -48,13 +62,3 @@ data:
       targetCPUUtilizationPercentage: 80
       targetMemoryUtilizationPercentage: null
     
-    livenessProbe:
-      httpGet:
-      path: /
-      port: 8080
-
-    readinessProbe:
-      httpGet:
-        path: /
-        port: 8080
-
