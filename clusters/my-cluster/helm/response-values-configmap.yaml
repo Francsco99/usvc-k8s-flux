@@ -25,20 +25,6 @@ data:
       targetPort: 8080
       nodePort: 30092
 
-    livenessProbe:
-      httpGet:
-        path: /
-        port: 8080
-      initialDelaySeconds: 5
-      periodSeconds: 10
-
-    readinessProbe:
-      httpGet:
-        path: /
-        port: 8080
-      initialDelaySeconds: 5
-      periodSeconds: 10
-
     resources:
       requests:
         cpu: "100m"
