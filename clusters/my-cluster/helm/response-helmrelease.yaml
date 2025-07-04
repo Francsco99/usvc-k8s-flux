@@ -7,7 +7,7 @@ spec:
   interval: 5m
   chart:
     spec:
-      chart: response-service
+      chart: spring-helm-chart
       sourceRef:
         kind: HelmRepository
         name: my-charts
